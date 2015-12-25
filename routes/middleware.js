@@ -22,14 +22,14 @@ var _ = require('underscore');
 exports.initLocals = function(req, res, next) {
 	
 	var locals = res.locals;
-	
+	var userName = process.env.USER_NAME;
 	locals.navLinks = [
-		{ label: 'Abdul-Rasheed Audu',		key: 'home',		href: '/' },
+		{ label: userName,		key: 'home',		href: '/' },
 		{ label: 'Blog',		key: 'blog',		href: '/blog' }
 	];
 	
 	locals.user = req.user;
-	
+	locals.username = userName;
 	next();
 	
 };
