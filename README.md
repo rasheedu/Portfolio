@@ -8,6 +8,9 @@ I deployed to heroku and these are the settings I used. I made sure to add the .
 
 ```
 git checkout production
+```
+After doing this, you would want to remove the .env file from your .gitignore so your new branch contains your configs and urls. Do not push this new banch to github and expose your credentials.
+```
 git commit -am "message"
 git push heroku production:master
 ```
